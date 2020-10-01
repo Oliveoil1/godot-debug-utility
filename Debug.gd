@@ -20,14 +20,13 @@ func _ready():
 			debug_objects.append(obj)
 	
 func _process(delta):
-	var just_pressed = event.is_pressed() and not event.is_echo()
-	
-    	if Input.is_key_pressed(KEY_F3) and just_pressed:
-        	do_thing()
-		
 	for obj in debug_objects:
 		obj.update_self()
 		
+func _input(event):
+	var just_pressed = event.is_pressed() and not event.is_echo()
+	if Input.is_key_pressed(KEY_F3) and just_pressed:
+		visible = !visible
 		
 func create_obj(txt_name, var_get, arg):
 	var obj = Label.new()
