@@ -1,6 +1,6 @@
 extends VBoxContainer
 
-var debug_obj_script = preload("res://addons/Debug Utility/debug_obj.gd")
+var debug_obj_script = preload("res://addons/godot-debug-utility/debug_obj.gd")
 
 var debug_objects = []
 
